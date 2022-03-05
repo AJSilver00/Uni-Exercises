@@ -1,0 +1,147 @@
+#===========================================================================
+# Born-in
+#---------
+forename = input ("Please enter your forname")
+country = input ("Please enter the country where you were born")
+print (forename, "was born in", country)
+#===========================================================================
+# Meet-you
+#---------
+forename = input ("Please enter your forename")
+surname = input ("Please enter your surname")
+print ("Hello", forename, surname, "it is nice to meet you")
+#===========================================================================
+# Concatenating Strings.
+#---------
+forename = input("Please enter your forename")
+surname = input("Please enter your surname")
+fullname = (forename + surname)
+print (fullname)
+# We use the '+' to concatenate (aka glue together) strings.
+#===========================================================================
+# A program to add two numbers
+#---------
+num1 = input("Please type in a whole number")           #step 1
+num2 = input("Please type in another whole number")     #step 2
+num1 = int(num1)                                        #step 3
+num2 = int(num2)                                        #step 4
+total = num1 + num2                                     #step 5
+print (num1, "+", num2, "is", total)                    #step 6
+
+#What happens if you leave out the code that implements steps 3 and 4?
+#---------
+num1 = input("Please type in a whole number")           #step 1
+num2 = input("Please type in another whole number")     #step 2
+                                                        #deleted step
+                                                        #deleted step
+total = num1 + num2                                     #step 5
+print (num1, "+", num2, "is", total)                    #step 6
+# If you leave out steps 3 and step 4,
+# Then step 5 will just concatenate num1 and num2.
+# Computer will print out: 3 +  4 is 34
+# Because it is simply 'glueing' numbers together.
+# If you want it to print: 3 + 4 is 7,
+# Then you MUST define num1 and num2 as integers.
+# Only that way will the computer treat num1 and num2 as int rather than str.
+#===========================================================================
+# Repeating strings
+#---------
+theString = input ("Please enter a character string")
+num = input ("Please enter in a positive whole number")
+num = int(num)                  #This step is converting the string num into integer and then storing the result back into num.
+multiString = (theString * num) #This will repeat theString num times. Like so:
+print (multiString)             #will print it all in the same line: e.g. Hello Hello Hello
+# The * is used to repeat a string an integer number of times.
+# E.g. Hello * 3
+# Will print : Hello Hello Hello
+#===========================================================================
+# Celsius to Kelvin
+#---------
+celsius = input ("Please enter a temperature in degrees Celsius")
+celsius = float(celsius)
+kelvin = celsius + 273.15
+print (kelvin)
+# The function float() is used to convert a string representation of a number
+# into a floating point number.
+# The formula K = C + 273.15 was used to calculate Kelvin.
+#===========================================================================
+# Celsius to Fahrenheit
+#---------
+celsius = input ("Please enter a temperature in degrees Celsius")
+celsius = float(celsius)
+fahrenheit = celsius * 9 / 5 + 32
+print (celsius, "celsius converted to Fahrenheit, is", fahrenheit)
+#The function float() is used to convert a string representation of a number
+# into a float number.
+# The formula F = C x 9 / 5 + 32 is used to calculate Fahrenheit.
+#===========================================================================
+# Sum of numbers
+#---------
+num = input ("Please enter a positive whole number")
+num = int(num)
+sumOfNums = (num * (num + 1) / 2)
+print (sumOfNums, "is the sum of all whole numbers including the number you have entered")
+#===========================================================================
+# Calculating years and months from months
+#---------
+totalMonths = input ("Please enter a whole number")
+totalMonths = int(totalMonths)
+years = (totalMonths // 12)
+months = totalMonths % 12
+print (totalMonths, "months is", years, "years and", months, "months")
+# Python's integer division operation // should be
+# used to get the number of years.
+# // means floor division. E.g. 0.999 will equal 0.
+# Python's remainder operation % should be used to get the remaining months.
+#===========================================================================
+# Inches to Cm - Length Conversion
+#---------
+inches = input ("Please enter a number in inches")
+inches = float(inches)
+centimetres = (inches*2.54)
+print (inches, "inches converted into centimetres will be", centimetres, "cm")
+#===========================================================================
+# Cm to Inches - Length Conversion
+#---------
+# 1 inch converts to 2.54cm
+centimetres = input ("Please enter a number in centimetres")
+centimetres = float(centimetres)
+inches = (centimetres/2.54)
+print (centimetres, "cm converted into inches will be", inches, "inches")
+#===========================================================================
+# Euro to Pound - Currency conversion
+#---------
+euro = input("Please enter how many Euros can be bought for 1 pound")
+euro = float(euro)
+hundredEuro = 100/euro
+print("£",hundredEuro, "will be the cost for 100 Euros")
+euroBuy = input("Please enter how many Euros you would like to buy")
+euroBuy = float(euroBuy)
+buy = euroBuy/euro
+print ("£",buy, "will be the cost for", euroBuy, "Euros")
+#===========================================================================
+# Fahrenheit to Celsius
+#---------
+fahrenheit = input("Please enter a temperature in Fahrenheit")
+fahrenheit = float(fahrenheit)
+celsius = ((fahrenheit - 32)/(9/5))
+print (fahrenheit, "F converted to degrees Celsius will be", celsius, "degrees Celsius")
+# In order to calculate celsius, the following equation was used:
+# F = C x 9/5 + 32
+# I rearranged this equation to find celsius:
+# C = (F-32)/(9/5)
+#===========================================================================
+# Fahrenheit to Kelvin (F to K)
+#---------
+# Tip: To get F to K, you need F to C then to K
+fahrenheit = input("Please enter a temperature in Fahrenheit")
+fahrenheit = float(fahrenheit)
+celsius = ((fahrenheit - 32)/(9/5))
+kelvin = celsius + 273.15
+print (fahrenheit, "F converted into Kelvin, is", kelvin, "K")
+# We use the following equations to get from F to C first.
+# F = C x 9/5 + 32
+# Rearranged to get C:
+# C = ((F-32)/(9/5))
+# We used this equation to get from C to K
+# K = C + 273.15
